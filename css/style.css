@@ -292,7 +292,7 @@ ul {
   padding: 20px; }
 
 .app {
-  background-color: #ffe;
+  background-color: #fff;
   min-height: 100vh; }
 
 .appNav {
@@ -301,13 +301,13 @@ ul {
   left: 0;
   width: 23%;
   height: 100%;
-  background-image: linear-gradient(-45deg, #3E50B4, #6639B6, #9B26AF); }
+  background-color: #4f4f4f; }
   .appNav .logo {
     margin: 0 auto;
     border-radius: 3px;
-    background-image: linear-gradient(135deg, #fff, rgba(255, 255, 255, 0.5));
+    background-color: #fff;
     text-align: center;
-    color: #9B26AF;
+    color: #4f4f4f;
     font-size: 25px;
     font-family: "Roboto";
     font-weight: 500;
@@ -342,7 +342,7 @@ ul {
         height: 0;
         border-style: solid;
         border-width: 20px 0 21px 0;
-        border-color: transparent #ffe transparent transparent;
+        border-color: transparent #fff transparent transparent;
         position: absolute;
         top: 0;
         right: -20px;
@@ -388,10 +388,10 @@ ul {
     font-size: 30px; }
   .appLabs .lab {
     padding: 20px 0;
-    background-color: #ffe;
+    background-color: #fff;
     line-height: 1.5;
     font-size: 15px;
-    max-width: 650px;
+    max-width: 700px;
     margin: 0 auto;
     display: none;
     position: relative;
@@ -403,4 +403,15 @@ ul {
     .appLabs .lab p {
       margin: 10px 0; }
     .appLabs .lab iframe {
+      margin: 25px 0;
+      width: 100%;
+      height: 720px; }
+    .appLabs .lab img {
       margin: 25px 0; }
+    .appLabs .lab ul {
+      margin: 0;
+      padding: 0; }
+    .appLabs .lab img:not(src) {
+      width: 100%;
+      height: 400px;
+      background-color: #eee; }
