@@ -1,0 +1,163 @@
+@import './core';
+@import './variables';
+@import './fonts';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    padding: 20px;
+}
+
+.app {
+    background-color: #ffe;
+    min-height: 100vh;
+}
+
+.appNav {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 23%;
+    height: 100%;
+    background-image: linear-gradient(-45deg, #3E50B4, #6639B6, #9B26AF);
+    
+    .logo {
+        margin: 0 auto;
+        border-radius: 3px;
+        background-image: linear-gradient(135deg, #fff, rgba(255,255,255,0.5));
+        text-align: center;
+        color: #9B26AF;
+        font-size: 25px;
+        font-family: "Roboto";
+        font-weight: 500;
+        display: inline-block;
+        width: 200px;
+        position: absolute;
+        top: 20px;
+        left: 0;
+        right: 0;
+    } 
+
+    ul {
+        li {
+            display: block;
+            position: relative;
+            cursor: pointer;
+
+            &:hover {
+                span {
+                    text-indent: 7px;
+                }
+            }
+
+            &.active {
+                span:before {
+                    border-width: 21px 20px 21px 0;
+                }
+            }
+
+            & > span {
+                display: inline-block;
+                text-align: left;
+                background-color: transparent;
+                border-color: transparent;
+                font-family: "Roboto"; 
+                font-weight: 500;
+                color: rgba(255, 255, 255, 0.9);
+                font-size: 18px;
+                padding: 10px;
+                transition: 0.3s;
+
+                &:before {
+                    content: '';
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 20px 0 21px 0;
+                    border-color: transparent #ffe transparent transparent;
+                    position: absolute;
+                    top:0;
+                    right: -20px;
+                    display: block;
+                    transition: 0.3s;
+                }
+            }
+        }
+    }
+
+    .author {
+        font-family: "Roboto";
+        font-weight: 500;
+        position: absolute;
+        bottom: 0;
+        padding: 0 0 15px 30px;
+        width: 100%;
+        color: rgba(255, 255, 255, 0.9);
+
+        span {
+            position: relative;
+
+            &:before {
+                content: '';
+                width: 5px;
+                height: 5px;
+                background-color: rgba( 255, 255, 255, 0.9);
+                border-radius: 50%;
+                display: block;
+                position: absolute;
+                top: 0;
+                left: -10px;
+            }
+        }
+    }
+}
+
+.appLabs {
+    font-family: "Roboto";
+    position: relative;
+    width: calc(77% - 20px);
+    left: calc(23% + 20px);
+
+    &:after {
+        content: "Alegeti Laborator";
+        position: absolute;
+        top: 150px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        text-align: center;
+        font-weight: 500;
+        color: #ccc;
+        font-size: 30px;
+    }
+
+    .lab {
+        padding: 20px 0;
+        background-color: #ffe;
+        line-height: 1.5;
+        font-size: 15px;
+        max-width: 650px;
+        margin: 0 auto;
+        display: none;
+        position: relative;
+        z-index: 1;
+    
+        &.active {
+            display: block;
+        }
+        h3 {
+            padding-bottom: 10px;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+    }
+
+}
