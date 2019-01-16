@@ -32,11 +32,12 @@ ul {
         background-color: #fff;
         text-align: center;
         color: #4f4f4f;
-        font-size: 25px;
+        font-size: 20px;
         font-family: "Roboto";
         font-weight: 500;
         display: inline-block;
-        width: 200px;
+        margin: 0 30px;
+        padding: 15px 0;
         position: absolute;
         top: 20px;
         left: 0;
@@ -44,18 +45,24 @@ ul {
     } 
 
     ul {
+        padding: 0;
+
         li {
             display: block;
             position: relative;
             cursor: pointer;
+            transition: 0.3s;
 
             &:hover {
                 span {
                     text-indent: 7px;
+                    color: #fff;
                 }
             }
 
             &.active {
+                background-color: rgba( 255, 255, 255, 0.1);
+
                 span:before {
                     border-width: 21px 20px 21px 0;
                 }
@@ -82,7 +89,7 @@ ul {
                     border-color: transparent #fff transparent transparent;
                     position: absolute;
                     top:0;
-                    right: -20px;
+                    right: 0px;
                     display: block;
                     transition: 0.3s;
                 }
@@ -160,6 +167,12 @@ ul {
             margin: 10px 0;
         }
 
+        video,
+        audio  {
+            max-width: 100%;
+            margin: 25px auto;
+        }
+
         iframe {
             margin: 25px 0;
             width: 100%;
@@ -167,7 +180,10 @@ ul {
         }
 
         img {
-            margin:25px 0; 
+            margin: 25px auto; 
+            max-width: 100%;
+            display: block;
+
         }
 
         ul {
@@ -175,11 +191,6 @@ ul {
             padding: 0;
         }
 
-        img:not(src) {
-            width: 100%;
-            height: 400px;
-            background-color: #eee;
-        }
     }
 
 }
